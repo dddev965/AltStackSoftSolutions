@@ -1,0 +1,59 @@
+<div class="container">
+  <div class="row d-flex justify-content-center align-items-center">
+    
+
+    <form [formGroup]="dataFrom" (ngSubmit)="onUpdate()">
+        <div class="col-md-4 p-4 border rounded">
+          <h4>Edit Form</h4>
+        <div class="mb-3 m-1">
+          <label class="form-label">Name</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Enter New name"
+            formControlName="name"
+          />
+        </div>
+        <div class="mb-3">
+          <label class="form-label">last Name</label>
+          <input
+            type="text"
+            formControlName="lastName"
+            class="form-control"
+            placeholder="Enter New last name"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Address</label>
+          <input
+            type="text"
+            formControlName="address"
+            class="form-control"
+            placeholder="Enter New your Address"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Mobile</label>
+          <input
+            type="text"
+            class="form-control"
+            formControlName="mobile"
+            placeholder="Enter New your Mobile number "
+          />
+        </div>
+
+        <div class="col-12 m-2">
+          <button type="submit" class="btn btn-primary">Update</button>
+          @if (update==true) {
+
+            <div class="alert alert-primary" role="alert">
+               data has been updated you are redirecting to viewData
+              </div>
+          }
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
